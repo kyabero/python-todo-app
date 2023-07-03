@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="POST">{% csrf_token %} <!-- csrf_tokenはセキュリティ対策 -->
+    {{form.as_p }} <!-- 「as_p」はformの中を<p>タグで囲む --> 
+    <input type="submit" value="create">
+</form>
+{% endblock content %}
